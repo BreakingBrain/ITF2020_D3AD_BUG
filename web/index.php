@@ -13,7 +13,6 @@
            $secret = @hash_hmac('sha512', $_POST['nonce'], $secret);
        }
 
-       print_r($secret);
        $hash = @hash_hmac('sha512', $_POST['file'], $secret);
 
        if ($hash !== $_POST['hash']) {
